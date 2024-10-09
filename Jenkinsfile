@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCESS_KEY_ID_CREDS = credentials('aws-credential-key') // Access Key ID credentials ID
-        AWS_SECRET_ACCESS_KEY_CREDS = credentials('aws-credentials-key') // Secret Access Key credentials ID
+        AWS_ACCESS_KEY_ID_CREDS = credentials('acesskey') // Access Key ID credentials ID
+        AWS_SECRET_ACCESS_KEY_CREDS = credentials('secretkey') // Secret Access Key credentials ID
         KUBE_CONFIG_CREDS = credentials('kubeconfig') 
     }
 
@@ -13,7 +13,7 @@ pipeline {
                 // Checkout your source code from GitHub
                 script {
                     // Attempt to checkout the source code
-                    git url: "https://github.com/ArjunMnn/TWSThreeTierAppChallenge.git", branch: "main"
+                    git url: "https://github.com/Dharmendrasingh9760/TWSThreeTierAppChallenge.git", branch: "main"
                 }
             }
         }
