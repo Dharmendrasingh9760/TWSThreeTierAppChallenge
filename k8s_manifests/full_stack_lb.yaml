@@ -11,7 +11,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: k8s-workshop-mainlb-7f430e3450-822386880.us-east-1.elb.amazonaws.com
+    - host: k8s-workshop-mainlb-7f430e3450-350058994.us-west-2.elb.amazonaws.com
       http:
         paths:
           - path: /api
@@ -20,7 +20,7 @@ spec:
               service:
                 name: api
                 port:
-                  number: 8080
+                  number: 4000
           - path: /
             pathType: Prefix
             backend:
