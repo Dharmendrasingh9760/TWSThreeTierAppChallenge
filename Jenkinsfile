@@ -30,7 +30,7 @@ pipeline {
                         sh "aws configure set aws_access_key_id ${AWS_ACCESS_KEY_ID_CREDS}"
                         sh "aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY_CREDS}"
                         sh "aws configure list"
-                        sh "aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/u1o8l9k6"
+                        sh "aws ecr-public get-login-password --region us-west-2 | docker login --username AWS --password-stdin public.ecr.aws/u1o8l9k6"
                         sh "docker build -t three-tier-frontend frontend"
                         sh "docker tag three-tier-frontend:latest public.ecr.aws/u1o8l9k6/three-tier-frontend:latest"
                         sh "docker push public.ecr.aws/u1o8l9k6/three-tier-frontend:latest"
